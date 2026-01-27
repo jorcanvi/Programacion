@@ -1,3 +1,95 @@
+##################################
+# SISTEMA OPERATIVO
+##################################
+
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+
+# Linux / WSL
+*~
+.nfs*
+.fuse_hidden*
+.directory
+.Trash-*
+
+##################################
+# ARCHIVOS TEMPORALES / BACKUP
+##################################
+
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.old
+
+##################################
+# MICROSOFT OFFICE / LIBREOFFICE
+##################################
+
+
+# Word / Excel / PowerPoint
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+
+
+# OpenOffice / LibreOffice
+.~lock.*#
+*.odt#
+*.ods#
+*.odp#
+
+
+##################################
+# ARCHIVOS DE COPIA DE WINDOWS
+##################################
+
+
+# Copias automáticas al copiar desde Windows
+*.lnk
+*.url
+
+##################################
+# WINDOWS ZONE IDENTIFIER (NTFS ADS)
+##################################
+
+
+*:Zone.Identifier
+
+##################################
+# IDEs (genérico)
+##################################
+
+
+.idea/
+.vscode/
+*.iml
+
+##################################
+# NODE / JAVA (si aplica)
+##################################
+
+
+node_modules/
+dist/
+build/
+target/
+
 # Compiled class file
 *.class
 
