@@ -1,15 +1,15 @@
-package Controller;
+package controller;
 
-import Model.trabajador.Trabajador;
-import Service.trabajador.TrabajadorCocinaService;
-import Service.trabajador.TrabajadorRepartidorService;
-import Service.trabajador.TrabajadorSalaService;
-import Service.trabajador.TrabajadorService;
-import View.MainView;
-import View.trabajador.TrabajadorCocinaView;
-import View.trabajador.TrabajadorRepartidorView;
-import View.trabajador.TrabajadorSalaView;
-import View.trabajador.TrabajadorView;
+import model.trabajador.Trabajador;
+import service.trabajador.TrabajadorCocinaService;
+import service.trabajador.TrabajadorRepartidorService;
+import service.trabajador.TrabajadorSalaService;
+import service.trabajador.TrabajadorService;
+import view.MainView;
+import view.trabajador.TrabajadorCocinaView;
+import view.trabajador.TrabajadorRepartidorView;
+import view.trabajador.TrabajadorSalaView;
+import view.trabajador.TrabajadorView;
 
 public class TrabajadorController {
     private TrabajadorService servicio;

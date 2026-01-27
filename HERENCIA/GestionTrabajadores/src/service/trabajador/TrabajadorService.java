@@ -1,9 +1,9 @@
-package Service.trabajador;
+package service.trabajador;
 
-import Model.trabajador.Trabajador;
-import Utils.Entrada;
-import Validator.trabajador.TrabajadorValidator;
-import View.MainView;
+import model.trabajador.Trabajador;
+import utils.Entrada;
+import validator.trabajador.TrabajadorValidator;
+import view.MainView;
 
 public abstract class TrabajadorService {
 

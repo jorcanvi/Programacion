@@ -1,6 +1,6 @@
-package View;
+package view;
 
-import Model.trabajador.Trabajador;
+import model.trabajador.Trabajador;
 
 public class MainView {
     public static void menuPrincipal(Trabajador trabajador) {

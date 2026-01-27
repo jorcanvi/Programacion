@@ -1,8 +1,7 @@
-package View.trabajador;
+package view.trabajador;
 
-import Model.trabajador.Trabajador;
-import Model.trabajador.TrabajadorCocina;
-import Model.trabajador.TrabajadorRepartidor;
+import model.trabajador.Trabajador;
+import model.trabajador.TrabajadorRepartidor;
 
 public class TrabajadorRepartidorView extends TrabajadorView {
     @Override

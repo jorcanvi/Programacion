@@ -1,4 +1,4 @@
-package Model.trabajador;
+package model.trabajador;
 
 public abstract class Trabajador {
     protected String nombre;

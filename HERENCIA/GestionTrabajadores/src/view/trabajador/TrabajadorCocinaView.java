@@ -1,7 +1,7 @@
-package View.trabajador;
+package view.trabajador;
 
-import Model.trabajador.Trabajador;
-import Model.trabajador.TrabajadorCocina;
+import model.trabajador.Trabajador;
+import model.trabajador.TrabajadorCocina;
 
 public class TrabajadorCocinaView extends TrabajadorView {
 

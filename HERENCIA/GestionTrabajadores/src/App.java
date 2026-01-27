@@ -1,13 +1,13 @@
-import Controller.TrabajadorController;
-import Utils.Entrada;
-import View.MainView;
+import controller.TrabajadorController;
+import utils.Entrada;
+import view.MainView;
 
 public class App {
 
     static TrabajadorController gestionTrabajadores = new TrabajadorController();
 
     public static void main(String[] args) {
-        System.out.println("Aplicación Trabajadores");
+        MainView.mostrarMensaje("Aplicación Trabajadores");
 
         int opcion;
         do {
@@ -16,7 +16,7 @@ public class App {
             ejecutarOpcion(opcion);
         } while (opcion != 0);
 
-        System.out.println("Cerrando programa");
+        MainView.mostrarMensaje("Cerrando programa");
     }
 
     private static void ejecutarOpcion(int opcion) {

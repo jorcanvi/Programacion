@@ -1,9 +1,9 @@
-package Service.trabajador;
+package service.trabajador;
 
-import Model.trabajador.Trabajador;
-import Model.trabajador.TrabajadorRepartidor;
-import Utils.Entrada;
-import View.MainView;
+import model.trabajador.Trabajador;
+import model.trabajador.TrabajadorRepartidor;
+import utils.Entrada;
+import view.MainView;
 
 public class TrabajadorRepartidorService extends TrabajadorService{
 

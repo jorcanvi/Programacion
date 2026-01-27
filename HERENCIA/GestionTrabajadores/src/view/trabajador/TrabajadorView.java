@@ -1,6 +1,6 @@
-package View.trabajador;
+package view.trabajador;
 
-import Model.trabajador.Trabajador;
+import model.trabajador.Trabajador;
 
 public abstract class TrabajadorView {
 

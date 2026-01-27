@@ -1,6 +1,4 @@
-package Validator.trabajador;
-
-import Model.trabajador.Trabajador;
+package validator.trabajador;
 
 public class TrabajadorValidator {
     public boolean validarNombre(String nombre) {

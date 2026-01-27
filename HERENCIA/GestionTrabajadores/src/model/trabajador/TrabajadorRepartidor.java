@@ -1,4 +1,4 @@
-package Model.trabajador;
+package model.trabajador;
 
 public class TrabajadorRepartidor extends Trabajador {
     private String zona;

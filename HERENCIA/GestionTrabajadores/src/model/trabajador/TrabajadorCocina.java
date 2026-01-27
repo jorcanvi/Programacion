@@ -1,7 +1,6 @@
-package Model.trabajador;
+package model.trabajador;
 
 public final class TrabajadorCocina extends Trabajador {
-    public final int UMBRAL_PLATOS = 10;
 
     private int platos;
 
