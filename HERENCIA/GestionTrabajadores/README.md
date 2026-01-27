@@ -1,5 +1,6 @@
 ## Requisitos del proyecto
 
+- **Documentacion**/ En la carpeta doc
 
 - **Lenguaje:** Java
 - **JDK utilizado:** OpenJDK 23
