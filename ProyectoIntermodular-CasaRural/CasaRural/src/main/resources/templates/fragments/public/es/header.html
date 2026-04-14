@@ -1,0 +1,15 @@
+<header th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+
+    <h1>Casa Rural</h1>
+
+    <!-- Menú de navegación de la web pública -->
+    <nav>
+        <a th:href="@{/templates/fragments/public}">Inicio</a> |
+        <a th:href="@{/casa}">La casa</a> |
+        <a th:href="@{/reservas}">Reservas</a> |
+        <a th:href="@{/contacto}">Contacto</a>
+    </nav>
+
+    <hr>
+
+</header>

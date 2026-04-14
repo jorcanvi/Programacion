@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/public/en/head :: head('La casa - Casa Rural')}"></head>
+
+<body>
+
+<header th:replace="~{fragments/public/en/header :: header}"></header>
+
+<main>
+    <h2>Sobre la casa</h2>
+    <p>Aquí se mostrará la información general del alojamiento.</p>
+
+    <h2>Image gallery</h2>
+
+    <div>
+        <div th:each="imagen : ${imagenes}">
+            <img th:src="${imagen.url}" alt="Image">
+            <p th:text="${imagen.descripcionEn}"></p>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/public/en/footer :: footer}"></footer>
+
+</body>
+</html>

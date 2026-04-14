@@ -1,0 +1,9 @@
+<head th:fragment="head(tituloPagina)" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título dinámico del panel de administración -->
+    <title th:text="${tituloPagina}">Panel de administración</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
