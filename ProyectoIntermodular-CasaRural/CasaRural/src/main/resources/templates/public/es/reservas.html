@@ -9,7 +9,38 @@
 
 <main>
     <h2>Reservas</h2>
-    <p>Aquí se mostrará la disponibilidad de la casa rural.</p>
+
+    <p>
+        A continuación se muestran los periodos actualmente ocupados de la casa rural.
+        Para realizar una reserva, es necesario contactar por teléfono.
+    </p>
+
+    <section>
+        <h3>Fechas no disponibles</h3>
+
+        <div th:if="${#lists.isEmpty(reservas)}">
+            <p>No hay reservas registradas en este momento.</p>
+        </div>
+
+        <table th:if="${not #lists.isEmpty(reservas)}">
+            <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Teléfono</th>
+                <th>Fecha de inicio</th>
+                <th>Fecha de fin</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="reserva : ${reservas}">
+                <td th:text="${reserva.nombreCliente}">Nombre del cliente</td>
+                <td th:text="${reserva.telefono}">Teléfono</td>
+                <td th:text="${#temporals.format(reserva.fechaInicio, 'dd/MM/yyyy')}">10/05/2026</td>
+                <td th:text="${#temporals.format(reserva.fechaFin, 'dd/MM/yyyy')}">26/05/2026</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 </main>
 
 <footer th:replace="~{fragments/public/es/footer :: footer}"></footer>

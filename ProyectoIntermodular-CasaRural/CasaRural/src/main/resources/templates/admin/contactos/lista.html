@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contactos</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div th:replace="~{admin/layout/sidebar :: sidebar}"></div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <p>Panel de administración</p>
+                <h2>Contactos</h2>
+            </div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="content">
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Mensaje</th>
+                        <th>Fecha de envío</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr th:each="contacto : ${contactos}">
+                        <td th:text="${contacto.id}"></td>
+                        <td th:text="${contacto.nombre}"></td>
+                        <td th:text="${contacto.email}"></td>
+                        <td th:text="${contacto.telefono}"></td>
+                        <td th:text="${contacto.mensaje}"></td>
+                        <td th:text="${#temporals.format(contacto.fechaEnvio, 'dd/MM/yyyy HH:mm')}"></td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

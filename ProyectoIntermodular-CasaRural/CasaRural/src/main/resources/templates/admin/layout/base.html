@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Admin</title>
+
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <div class="sidebar" th:replace="~{admin/layout/sidebar :: sidebar}"></div>
+
+    <div class="main">
+
+        <div class="header" th:replace="~{admin/layout/header :: header}"></div>
+
+        <div class="content">
+            <div th:replace="${contenido}"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

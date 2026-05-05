@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/public/en/head :: head('Aviso legal - Casa Rural')}"></head>
+<head th:replace="~{fragments/public/es/head :: head('Política de cookies - Casa Rural')}"></head>
 
 <body>
 
-<header th:replace="~{fragments/public/en/header :: header}"></header>
+<header th:replace="~{fragments/public/es/header :: header}"></header>
 
 <main>
-    <h2>Aviso legal</h2>
+    <h2>Política de cookies</h2>
 
-    <p>
-        Esta página contendrá la información legal básica del sitio web.
-    </p>
+    <section>
+        <h3>¿Qué son las cookies?</h3>
+        <p>
+            Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario
+            para facilitar el uso y navegación por el sitio web.
+        </p>
+    </section>
 
-    <p>
-        Más adelante se podrá completar con los datos identificativos del titular,
-        condiciones de uso y otros apartados legales necesarios.
-    </p>
+    <section>
+        <h3>Tipos de cookies utilizadas</h3>
+        <p>
+            Este sitio web puede utilizar cookies técnicas necesarias para el funcionamiento
+            básico de la página, así como cookies de análisis para mejorar la experiencia del usuario.
+        </p>
+    </section>
+
+    <section>
+        <h3>Gestión de cookies</h3>
+        <p>
+            El usuario puede configurar su navegador para aceptar o rechazar el uso de cookies,
+            así como eliminar las ya almacenadas en su dispositivo.
+        </p>
+    </section>
+
+    <section>
+        <h3>Modificaciones</h3>
+        <p>
+            Esta política de cookies puede modificarse en función de exigencias legales o
+            para adaptarse a nuevas funcionalidades del sitio web.
+        </p>
+    </section>
 </main>
 
-<footer th:replace="~{fragments/public/en/footer :: footer}"></footer>
+<footer th:replace="~{fragments/public/es/footer :: footer}"></footer>
 
 </body>
 </html>

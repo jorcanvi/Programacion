@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${reserva.id == null ? 'Nueva reserva' : 'Editar reserva'}">
+        Formulario reserva
+    </title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div th:replace="~{admin/layout/sidebar :: sidebar}"></div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <p>Panel de administración</p>
+                <h2 th:text="${reserva.id == null ? 'Nueva reserva' : 'Editar reserva'}">
+                    Formulario
+                </h2>
+            </div>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="content">
+
+            <div class="card form-card">
+
+                <form th:action="${reserva.id == null} ? @{/admin/reservas/guardar} : @{/admin/reservas/actualizar}"
+                      method="post">
+
+                    <!-- ID oculto -->
+                    <input type="hidden" name="id" th:value="${reserva.id}">
+
+                    <!-- =========================
+                         NOMBRE CLIENTE
+                    ========================== -->
+                    <div class="form-group">
+                        <label for="nombreCliente">Nombre del cliente</label>
+
+                        <input type="text"
+                               id="nombreCliente"
+                               name="nombreCliente"
+                               th:value="${reserva.nombreCliente}"
+                               required>
+                    </div>
+
+                    <!-- =========================
+                         TELÉFONO
+                    ========================== -->
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+
+                        <input type="text"
+                               id="telefono"
+                               name="telefono"
+                               th:value="${reserva.telefono}"
+                               required>
+                    </div>
+
+                    <!-- =========================
+                         FECHA INICIO
+                    ========================== -->
+                    <div class="form-group">
+                        <label for="fechaInicio">Fecha de inicio</label>
+
+                        <input type="date"
+                               id="fechaInicio"
+                               name="fechaInicio"
+                               th:value="${reserva.fechaInicio}"
+                               required>
+                    </div>
+
+                    <!-- =========================
+                         FECHA FIN
+                    ========================== -->
+                    <div class="form-group">
+                        <label for="fechaFin">Fecha de fin</label>
+
+                        <input type="date"
+                               id="fechaFin"
+                               name="fechaFin"
+                               th:value="${reserva.fechaFin}"
+                               required>
+                    </div>
+
+                    <!-- =========================
+                         BOTONES
+                    ========================== -->
+                    <div class="form-actions">
+
+                        <a th:href="@{/admin/reservas}" class="btn-secondary">
+                            Cancelar
+                        </a>
+
+                        <button type="submit" class="btn">
+                            <span th:text="${reserva.id == null ? 'Guardar reserva' : 'Actualizar reserva'}">
+                                Guardar
+                            </span>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

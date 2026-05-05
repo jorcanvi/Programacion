@@ -58,52 +58,12 @@ public class PublicController {
      *
      * @return nombre lógico de la vista de la casa en inglés
      */
-    @GetMapping("/en/casa")
+    @GetMapping("/en/house")
     public String casaEn(Model model) {
 
         model.addAttribute("imagenes", imagenService.obtenerTodas());
 
         return "public/en/casa";
-    }
-
-    /**
-     * Muestra la página de reservas en castellano.
-     *
-     * @return nombre lógico de la vista de reservas en castellano
-     */
-    @GetMapping("/reservas")
-    public String reservasEs() {
-        return "public/es/reservas";
-    }
-
-    /**
-     * Muestra la página de reservas en inglés.
-     *
-     * @return nombre lógico de la vista de reservas en inglés
-     */
-    @GetMapping("/en/reservas")
-    public String reservasEn() {
-        return "public/en/reservas";
-    }
-
-    /**
-     * Muestra la página de contacto en castellano.
-     *
-     * @return nombre lógico de la vista de contacto en castellano
-     */
-    @GetMapping("/contacto")
-    public String contactoEs() {
-        return "public/es/contacto";
-    }
-
-    /**
-     * Muestra la página de contacto en inglés.
-     *
-     * @return nombre lógico de la vista de contacto en inglés
-     */
-    @GetMapping("/en/contacto")
-    public String contactoEn() {
-        return "public/en/contacto";
     }
 
     /**
@@ -121,7 +81,7 @@ public class PublicController {
      *
      * @return nombre lógico de la vista de aviso legal en inglés
      */
-    @GetMapping("/en/aviso-legal")
+    @GetMapping("/en/legal-advice")
     public String avisoLegalEn() {
         return "public/en/aviso-legal";
     }

@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/admin/head :: head('Panel de administración')}"></head>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
 
 <body>
 
-<header th:replace="~{fragments/admin/header :: header}"></header>
+<div class="layout">
 
-<main>
-    <h2>Panel de administración</h2>
-    <p>Zona privada del sistema.</p>
-</main>
+    <!-- Sidebar -->
+    <div class="sidebar" th:replace="~{admin/layout/sidebar :: sidebar}"></div>
 
-<footer th:replace="~{fragments/admin/footer :: footer}"></footer>
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="header" th:replace="~{admin/layout/header :: header}"></div>
+
+        <!-- CONTENIDO -->
+        <div>
+
+            <div class="card">
+                <h2>Dashboard</h2>
+                <p>Bienvenido al panel de administración de la casa rural.</p>
+            </div>
+
+            <!-- Tarjetas resumen -->
+            <div style="display:flex; gap:20px; flex-wrap:wrap;">
+
+                <div class="card" style="flex:1; min-width:200px;">
+                    <h3>Imágenes</h3>
+                    <p>Gestión de la galería</p>
+                </div>
+
+                <div class="card" style="flex:1; min-width:200px;">
+                    <h3>Reservas</h3>
+                    <p>Control de disponibilidad</p>
+                </div>
+
+                <div class="card" style="flex:1; min-width:200px;">
+                    <h3>Contactos</h3>
+                    <p>Mensajes recibidos</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

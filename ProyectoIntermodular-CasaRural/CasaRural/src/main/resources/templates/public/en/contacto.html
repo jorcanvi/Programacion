@@ -1,15 +1,72 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/public/en/head :: head('Contacto - Casa Rural')}"></head>
+<head th:replace="~{fragments/public/en/head :: head('Contact - Country House')}"></head>
 
 <body>
 
 <header th:replace="~{fragments/public/en/header :: header}"></header>
 
 <main>
-    <h2>Contacto</h2>
-    <p>Aquí se mostrará el formulario de contacto.</p>
+    <h2>Contact</h2>
+
+    <p>
+        If you would like more information about the country house, you can send us
+        a message using the following form.
+    </p>
+
+    <!-- Confirmation message shown after sending the form -->
+    <p th:if="${param.ok}" style="color: green;">
+        Your message has been sent successfully.
+    </p>
+
+    <!-- Mensaje de error -->
+    <p th:if="${error}" th:text="${error}" style="color:red"></p>
+
+    <!-- FORMULARIO -->
+    <form th:action="@{/en/contact}" method="post">
+        <div>
+            <label for="nombre">Name:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="telefono">Phone:</label>
+            <input type="text" id="telefono" name="telefono">
+        </div>
+
+        <div>
+            <label for="mensaje">Message:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+
+    <!-- UBICACIÓN -->
+    <section>
+        <h3>Ubicación</h3>
+
+        <p>
+            Calle Ejemplo 123, 33000 Oviedo, Asturias
+        </p>
+
+        <iframe
+                src="https://www.google.com/maps?q=Oviedo&output=embed"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+    </section>
 </main>
 
 <footer th:replace="~{fragments/public/en/footer :: footer}"></footer>

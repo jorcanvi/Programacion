@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${imagen.id == null} ? 'Nueva imagen' : 'Editar imagen'">Formulario imagen</title>
+  <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <div th:replace="~{admin/layout/sidebar :: sidebar}"></div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <p>Panel de administración</p>
+        <h2 th:text="${imagen.id == null} ? 'Nueva imagen' : 'Editar imagen'">Formulario</h2>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+
+      <div class="card form-card">
+
+        <form th:action="${imagen.id == null} ? @{/admin/imagenes/guardar} : @{/admin/imagenes/actualizar}"
+              method="post"
+              enctype="multipart/form-data">
+
+          <!-- ID oculto (solo edición) -->
+          <input type="hidden" name="id" th:value="${imagen.id}">
+
+          <!-- =========================
+               SUBIDA DE IMAGEN
+          ========================== -->
+          <div class="form-group">
+            <label for="archivo">Archivo de imagen</label>
+
+            <input type="file"
+                   id="archivo"
+                   name="archivo"
+                   accept="image/*"
+                   th:required="${imagen.id == null}">
+          </div>
+
+          <!-- =========================
+               IMAGEN ACTUAL (solo edición)
+          ========================== -->
+          <div class="form-group" th:if="${imagen.id != null}">
+            <label>Imagen actual</label>
+
+            <div style="display:flex; gap:10px; align-items:center;">
+              <a th:href="@{${imagen.url}}"
+                 target="_blank"
+                 class="btn-secondary">
+                Ver imagen
+              </a>
+
+              <span th:text="${imagen.url}" style="font-size:12px; color:#64748b;"></span>
+            </div>
+          </div>
+
+          <!-- =========================
+               DESCRIPCIÓN ES
+          ========================== -->
+          <div class="form-group">
+            <label for="descripcionEs">Descripción en español</label>
+
+            <input type="text"
+                   id="descripcionEs"
+                   name="descripcionEs"
+                   th:value="${imagen.descripcionEs}"
+                   required>
+          </div>
+
+          <!-- =========================
+               DESCRIPCIÓN EN
+          ========================== -->
+          <div class="form-group">
+            <label for="descripcionEn">Descripción en inglés</label>
+
+            <input type="text"
+                   id="descripcionEn"
+                   name="descripcionEn"
+                   th:value="${imagen.descripcionEn}"
+                   required>
+          </div>
+
+          <!-- =========================
+               BOTONES
+          ========================== -->
+          <div class="form-actions">
+
+            <a th:href="@{/admin/imagenes}" class="btn-secondary">
+              Cancelar
+            </a>
+
+            <button type="submit" class="btn">
+                            <span th:text="${imagen.id == null} ? 'Guardar imagen' : 'Actualizar imagen'">
+                                Guardar
+                            </span>
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

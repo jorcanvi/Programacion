@@ -1,23 +1,46 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments/public/en/head :: head('Política de cookies - Casa Rural')}"></head>
+<head th:replace="~{fragments/public/en/head :: head('Cookies policy - Country House')}"></head>
 
 <body>
 
 <header th:replace="~{fragments/public/en/header :: header}"></header>
 
 <main>
-    <h2>Política de cookies</h2>
+    <h2>Cookies policy</h2>
 
-    <p>
-        Esta página contendrá la información relativa al uso de cookies dentro del sitio web.
-    </p>
+    <section>
+        <h3>What are cookies?</h3>
+        <p>
+            Cookies are small text files stored in the user's browser to improve navigation
+            and user experience.
+        </p>
+    </section>
 
-    <p>
-        Más adelante se podrá completar con la explicación sobre tipos de cookies,
-        finalidad y opciones de configuración.
-    </p>
+    <section>
+        <h3>Types of cookies used</h3>
+        <p>
+            This website may use technical cookies necessary for basic functionality,
+            as well as analytics cookies to improve user experience.
+        </p>
+    </section>
+
+    <section>
+        <h3>Cookie management</h3>
+        <p>
+            Users can configure their browser to accept or reject cookies,
+            as well as delete those already stored on their device.
+        </p>
+    </section>
+
+    <section>
+        <h3>Changes</h3>
+        <p>
+            This cookies policy may be updated to comply with legal requirements
+            or adapt to new features of the website.
+        </p>
+    </section>
 </main>
 
 <footer th:replace="~{fragments/public/en/footer :: footer}"></footer>
